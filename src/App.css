@@ -7,6 +7,7 @@
   height: auto;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden;
 }
 
 .navbar {
@@ -41,11 +42,8 @@
 
 .itemlistcontainer{
   margin: 20px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 10px;
+  width: 90vw;  
 }
 
 .itemcount {
@@ -64,4 +62,18 @@
   display: block;
   width: 90%;
   margin-left: 5%;
+}
+
+.itemList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prodDetail {
+  width: 400px;
+  border: 2px white solid;
+}
+
+.prodDetail .imgProd {
+  width: 200px;
 }
