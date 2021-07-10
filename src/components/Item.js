@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function Item({item}){
     return (
@@ -8,7 +9,8 @@ function Item({item}){
             <div>
                 <span>id: {item.product.id}&nbsp;&nbsp;</span>
                 <span>{item.product.price}</span>
-                <p>Descripcion: {item.product.description}</p>
+                <p>Description: {item.product.description}</p>
+                <button><Link to={`/item/${item.product.id}`}>Ver detalle</Link></button>
             </div>
         </div>
     )

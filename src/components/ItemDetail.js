@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ItemDetail({product}) {
-  
+  console.log('item', product)
     return(
         <div className="itemDetail">
             {!product ? (

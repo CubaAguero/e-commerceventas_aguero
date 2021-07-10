@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import ItemList from './ItemList';
+import ItemList from '../components/ItemList';
+import { useParams } from 'react-router-dom';
+
 
 const itemInfo = [
     {
@@ -9,6 +11,7 @@ const itemInfo = [
             description: 'Auricular de monitoreo circumaural negro',
             price: '$30.000',
             photoUrl: 'https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            category: 'headphone'
         }
 
     },
@@ -18,7 +21,8 @@ const itemInfo = [
             title: 'Microfono Rode Nt1a',
             description: 'Microfono condensador cardiode',
             price: '$50.000',
-            photoUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' 
+            photoUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' ,
+            category: 'mic'
 
         }
 
@@ -31,18 +35,26 @@ function ItemListContainer(){
 
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState([false])
+    const {categoryID} = useParams();
 
-    useEffect(()=>{
+    useEffect(()=> {
         setLoading(true)
          new Promise((resolve, reject)=>{
              setTimeout(() => resolve(itemInfo), 3000)
          })
          .then((itemInfoResolve)=>{
-             setProduct(itemInfoResolve)
-             setLoading(false)
+
+             if (categoryID){
+                 const itemFilter = itemInfoResolve.filter(element => element.category === categoryID)
+                 setProduct(itemFilter)
+                 setLoading(false)
+             }else{
+                setProduct(itemInfoResolve)
+                setLoading(false)
+             }
          }
          )
-    },[])
+    },[categoryID])
     
     if(loading){
         return(<div>
@@ -52,7 +64,8 @@ function ItemListContainer(){
     }
     return(
         <div className='itemlistcontainer'>
-           <ItemList product={product} />
+                    
+             <ItemList product={product} />      
 
         </div>
     );
