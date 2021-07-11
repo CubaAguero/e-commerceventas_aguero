@@ -1,7 +1,8 @@
 import React from 'react';
+import ItemCount from './ItemCount';
 
 function ItemDetail({product}) {
-  console.log('item', product)
+  
     return(
         <div className="itemDetail">
             {!product ? (
@@ -17,7 +18,9 @@ function ItemDetail({product}) {
                         <span>{product.price}</span>
                         <p>Descripcion: {product.description}</p>
                     </div>
+                    <ItemCount stock={5} initial={1} onAdd={(count)=> alert("Agregaste " + count + " productos!")} />
                 </>
+
             )}   
         </div>
     )

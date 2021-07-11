@@ -6,18 +6,18 @@ import { NavLink } from 'react-router-dom';
 function NavBar(){
 
     const monitores = 'Monitores de Estudio';
-    const headphones = 'Headphones';
-    const mic = 'Microfonos';
+    const headphones = 'headphones';
+    const mic = 'mic';
 
     return (
         <nav className = "navbar">
             <ul>
                 <li><NavLink exact to="/">Home</NavLink></li>
                 <li><NavLink to="/Products">Productos</NavLink>
-                    <ul>
-                        <li><NavLink to={`{/Category/${monitores}}`}>Monitores de Estudio</NavLink></li>
-                        <li><NavLink to={`{/Category/${headphones}}`}>Headphones</NavLink></li>
-                        <li><NavLink to={`{/Category/${mic}}`}>Microfonos</NavLink></li>
+                    <ul className='uldesplegable'>
+                        <li><NavLink to={`/Category/${monitores}`}>Monitores de Estudio</NavLink></li>
+                        <li><NavLink to={`/Category/${headphones}`}>Headphones</NavLink></li>
+                        <li><NavLink to={`/Category/${mic}`}>Microfonos</NavLink></li>
                     </ul>
                 </li> 
                 <li><NavLink to='/Contact'>Contacto</NavLink></li>

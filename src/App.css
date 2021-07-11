@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #282c34;
-  height: 100vh;
+  min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
   overflow: hidden;
@@ -34,6 +34,22 @@
   border-radius: 5px;
   background: #373b5a;
 }
+
+.uldesplegable {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 39px;
+  z-index: 1;
+  left: 0;
+}
+
+.navbar ul li:hover >.uldesplegable{
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
 
 .shopcartlogo {
   width: 35px;
@@ -69,10 +85,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .prodDetail {
-  width: 400px;
+  width: 350px;
   border: 2px white solid;
+  margin: 20px;
+  padding: 20px;
 }
 
 .prodDetail .imgProd {
@@ -87,7 +107,8 @@
 }
 
 .itemDetail {
-  width: 300px;
+  width: 90%;
+  height: 90%;
   padding: 20px;
   margin: 20px;
   display: flex;
