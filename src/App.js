@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
 
 //Pages
 import Home from './pages/Home'
@@ -13,43 +14,47 @@ import About from './pages/About';
 import NavBar from './components/NavBar.js';
 import ItemDetailContainer from './pages/ItemDetailContainer';
 //
+//Contex
+import { CartContex } from './components/CartContext';
+//
 
 function App() {
   return (
     <div className="App">
-     
-      <Router>
-        <NavBar/> 
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
+     <CartContex.Provider value={[]}>
+        <Router>
+          <NavBar/> 
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
 
-            <Route exact path="/Products">
-              <ItemListContainer />
-            </Route>
-            
-            <Route exact path="/Category/:categoryID">
-              <ItemListContainer />
-            </Route>
+              <Route exact path="/Products">
+                <ItemListContainer />
+              </Route>
+              
+              <Route exact path="/Category/:categoryID">
+                <ItemListContainer />
+              </Route>
 
-            <Route path="/item/:id">
-              <ItemDetailContainer />
-            </Route>
+              <Route path="/item/:id">
+                <ItemDetailContainer />
+              </Route>
 
-            <Route path="/Cart">
-              <Cart />
-            </Route>
+              <Route path="/Cart">
+                <Cart />
+              </Route>
 
-            <Route path='/Contact'>
-              <Contact />
-            </Route>
+              <Route path='/Contact'>
+                <Contact />
+              </Route>
 
-            <Route path='/About'>
-              <About />
-            </Route>
-          </Switch>
-      </Router>
+              <Route path='/About'>
+                <About />
+              </Route>
+            </Switch>
+         </Router>
+      </CartContex.Provider>
 
     </div>
   );

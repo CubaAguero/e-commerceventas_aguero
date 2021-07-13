@@ -11,7 +11,8 @@ const itemDetail = [
             description: 'Auricular de monitoreo circumaural negro',
             price: '$30',
             photoUrl: 'https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-            category: 'headphones'
+            category: 'headphones',
+            stock: '5'
         }
 
     },
@@ -22,7 +23,8 @@ const itemDetail = [
             description: 'Microfono condensador cardiode',
             price: '$50',
             photoUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' ,
-            category: 'mic'
+            category: 'mic',
+            stock: '3'
 
         }
 
@@ -34,7 +36,8 @@ const itemDetail = [
             description: 'Monitor de Estudio Gigabyte n5s. parlantes de 5 pulgadas, respuesta de frecuencia 70hz-22khz ',
             price: '$100',
             photoUrl: 'https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' ,
-            category: 'Monitores de Estudio'
+            category: 'Monitores de Estudio',
+            stock: '4'
 
         }
 
@@ -46,7 +49,8 @@ const itemDetail = [
             description: 'Monitor de Estudio Presonus Eris E4.5. Parlantes de 4.5", repsuesta de frecuencia 70hz-20khz',
             price: '$120',
             photoUrl: 'https://images.pexels.com/photos/4295360/pexels-photo-4295360.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' ,
-            category: 'Monitores de Estudio'
+            category: 'Monitores de Estudio',
+            stock: '5'
 
         }
 
@@ -58,7 +62,8 @@ const itemDetail = [
             description: 'Microfono condensador Sennheiser Mk8, de multipatron.',
             price: '$70',
             photoUrl: 'https://images.pexels.com/photos/3710191/pexels-photo-3710191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ,
-            category: 'mic'
+            category: 'mic',
+            stock: '2'
 
         }
 
@@ -70,7 +75,8 @@ const itemDetail = [
             description: 'Microfono dinamico Shure Sm58',
             price: '$20',
             photoUrl: 'https://images.pexels.com/photos/164879/pexels-photo-164879.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ,
-            category: 'mic'
+            category: 'mic',
+            stock: '6'
 
         }
 
@@ -82,7 +88,8 @@ const itemDetail = [
             description: 'Auricular Marshall Major Iii Black con microfono y control',
             price: '$20',
             photoUrl: 'https://images.pexels.com/photos/377711/pexels-photo-377711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' ,
-            category: 'headphones'
+            category: 'headphones',
+            stock: '3'
 
         }
 
