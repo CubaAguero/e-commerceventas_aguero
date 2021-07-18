@@ -14,14 +14,15 @@ import About from './pages/About';
 import NavBar from './components/NavBar.js';
 import ItemDetailContainer from './pages/ItemDetailContainer';
 //
-//Contex
-import { CartContex } from './components/CartContext';
+//Context
+import { CartProvider } from './Context/CartContext';
 //
 
 function App() {
+  
   return (
     <div className="App">
-     <CartContex.Provider value={[]}>
+     <CartProvider>
         <Router>
           <NavBar/> 
             <Switch>
@@ -54,7 +55,7 @@ function App() {
               </Route>
             </Switch>
          </Router>
-      </CartContex.Provider>
+      </CartProvider>
 
     </div>
   );

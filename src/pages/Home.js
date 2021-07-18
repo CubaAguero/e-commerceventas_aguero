@@ -5,7 +5,7 @@ function Home() {
     return(
         <div>
             <h1>Todo para tu sonido</h1>
-            <img src={Logo} className='img-logo'/>
+            <img src={Logo} className='img-logo' alt='logo de portada'/>
         </div>
     )
 }
