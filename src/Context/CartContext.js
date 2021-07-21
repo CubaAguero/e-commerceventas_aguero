@@ -5,7 +5,7 @@ export  const CartContext = createContext([]);
 export const CartProvider = ({ children }) => {
 
     const [itemCart, setItemCart] = useState([]);
-
+ 
     const isInCart = (props) => {
         
         itemCart.find(product => product.id === props.id)
@@ -26,14 +26,15 @@ export const CartProvider = ({ children }) => {
             console.log('Agregado al carrito')
         }
     }
-
+    
     const clear = () => {
         setItemCart([]);
         console.log('El carrito ah sido vaciado')
     }
 
-    const RemoveItem = (itemId) => {
-        itemCart.filter(item => item.id !== itemId)
+    const RemoveItem = (props) => {
+        const newCart = itemCart.filter(item => item.id !== props.id)
+        setItemCart(newCart)
         console.log('quitado del carrito')
     }
 

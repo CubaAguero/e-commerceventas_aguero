@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ShoppingCart from '../assets/ShoppingCart.png'
 
 function CartWidget() {

@@ -128,3 +128,12 @@
 .itemDetail .imgProd {
   width: 200px;
 }
+
+.cartDetail {
+  width: 300px;
+  border: 1px solid #fff;
+}
+
+.cartImg {
+  width: 100px;
+}
