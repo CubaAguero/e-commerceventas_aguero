@@ -1,17 +1,14 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import {CartContext} from '../Context/CartContext';
-import Item from './Item';
 
 function FinishShop(props){
-
-    const { RemoveItem, itemCart } = useContext(CartContext);
+    console.log(props, 'props')
    
     return (
         <div className='terminarCompra'>
-            <p>agregaste {props.quantityToAdd} productos al carrito</p>
-            <button><NavLink to="/Cart">Terminar Compra</NavLink></button>
+            <p>agregaste {props.props} productos al carrito</p>
+            <button><NavLink to="/Cart">Ir al Carrito</NavLink></button>
         </div>
     )
 }

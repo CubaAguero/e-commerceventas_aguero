@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 
+import { CartContext } from '../Context/CartContext'
+
 
 function NavBar(){
+
+    const { countTt } = useContext(CartContext);
 
     const monitores = 'Monitores de Estudio';
     const headphones = 'headphones';
@@ -23,7 +27,7 @@ function NavBar(){
                 <li><NavLink to='/Contact'>Contacto</NavLink></li>
                 <li><NavLink to='About'>Nosotros</NavLink></li>
             </ul>
-            <NavLink to="/Cart"><CartWidget /></NavLink>
+            {countTt ===0 ? <></>: <NavLink to="/Cart"><CartWidget /></NavLink>}
             
         </nav>
     );

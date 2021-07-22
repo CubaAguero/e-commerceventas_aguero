@@ -12,7 +12,7 @@ function ItemDetail({product}) {
     const onAdd = (e)=>{
         setQuantityToAdd(e)
         setQAddCart(true)
-        addToCart(product, quantityToAdd)
+        addToCart(product, e)
     }
     
     return(
@@ -33,7 +33,7 @@ function ItemDetail({product}) {
                    {!qAddCart ? (
                        <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
                     ) : (
-                        <FinishShop props={quantityToAdd, product} />
+                        <FinishShop props={quantityToAdd} />
                     )
                     } 
                 </>
