@@ -4,34 +4,33 @@ import FinishShop from './FinishShop';
 
 import { CartContext } from '../Context/CartContext';
 
-function ItemDetail({product}) {
+function ItemDetail({item}) {
     const [quantityToAdd, setQuantityToAdd] = useState();
     const [qAddCart, setQAddCart] = useState(false);
     const { addToCart } = useContext(CartContext);
-
+    
     const onAdd = (e)=>{
         setQuantityToAdd(e)
         setQAddCart(true)
-        addToCart(product, e)
+        addToCart(item, e)
     }
     
     return(
         <div className="itemDetail">
-            {!product ? (
+            {!item ? (
                 <span>
                     ...Cargando
                 </span>
             ) : (
                 <>
-                    <h4>{product.title}</h4>
-                    <img src={product.photoUrl} className='imgProd' alt="" />
+                    <h4>{item.title}</h4>
+                    <img src={item.photoUrl} className='imgProd' alt="" />
                     <div>
-                        <span>id: {product.id}&nbsp;&nbsp;</span>
-                        <span>{product.price}</span>
-                        <p>Descripcion: {product.description}</p>
+                        <span> ${item.price}</span>
+                        <p>Descripcion: {item.description}</p>
                     </div>
                    {!qAddCart ? (
-                       <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+                       <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                     ) : (
                         <FinishShop props={quantityToAdd} />
                     )

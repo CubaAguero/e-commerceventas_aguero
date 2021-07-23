@@ -15,8 +15,7 @@ export default function CartView(props) {
                 <h5>{props.item.title}</h5>
                 <img src={props.item.photoUrl} className="cartImg" />
                 <div>
-                    <span>Id: {props.item.id}</span>&nbsp;&nbsp;
-                    <span>{props.item.price}</span>
+                    <span> ${props.item.price}</span>
                 </div>
                 <button onClick={()=> RemoveItem(props.item)}><FontAwesomeIcon icon={faTrashAlt} /></button>
             </div>

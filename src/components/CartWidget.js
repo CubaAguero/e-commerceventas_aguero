@@ -13,7 +13,6 @@ function CartWidget() {
     return (
       <div className="cartWidget">
         <FontAwesomeIcon icon={faShoppingCart} />
-       {/* <img src={ShoppingCart} alt="" className='shopcartlogo'/> */}
        <span>{countTt}</span>
       </div>
     );

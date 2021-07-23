@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from '../components/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { getFirestore } from '../Firebase';
 
 
 const itemDetail = [
@@ -97,28 +98,29 @@ const itemDetail = [
 
 ]
 
-const getItem = ()=>{ 
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=> resolve(itemDetail), 2000)
-        })
-    
-}
-
-
 function ItemDetailContainer() {
     const [item, setItem] = useState([{}])
     const {id} = useParams();
-
+    
     useEffect(() => {
-        getItem().then ((itemDetailResolve)=>{
-            const itemId = itemDetailResolve.filter(element => element.product.id === id)
-            setItem(itemId)
+    
+        const db = getFirestore();
+        const itemId = db.collection("items").doc(id)
+        
+        itemId.get().then((doc) => {
+            if (doc.exist){
+                console.log('item does not exits');
+                return;
+            }else{
+                setItem({id: doc.id, ...doc.data()})
+            }
         })
+
     }, [id])
     
     return(
         <div className='itemDetailContainer'>
-            <ItemDetail product={item[0].product} />
+            <ItemDetail item={item} />
         </div>
 
     )
