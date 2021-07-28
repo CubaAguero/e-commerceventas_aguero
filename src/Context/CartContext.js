@@ -18,17 +18,14 @@ export const CartProvider = ({ children }) => {
             itemCart.forEach((element)=>{
                 if(element===item){
                     item.quantity += quantity;
-                    setCountTt(countTt + quantity);
-                
+                    setCountTt(countTt + quantity);                
                 }
             })
-            console.log('isincart')
-            console.log('countTt', countTt)
+            
         } else{
             item.quantity = quantity;
-            setItemCart([...itemCart, item])
+            setItemCart([...itemCart, item]);
             setCountTt(countTt + quantity);
-            console.log('Agregado al carrito')
         }
     }
     
@@ -44,6 +41,8 @@ export const CartProvider = ({ children }) => {
         setCountTt(countTt - props.quantity);
         console.log('quitado del carrito')
     }
+
+    
 
    return(
         <CartContext.Provider value={{addToCart, RemoveItem, itemCart, clear, countTt}} >

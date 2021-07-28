@@ -11,7 +11,7 @@ function Cart(){
     if(itemCart.length === 0){
         return(
             <div className="cart">
-                 <h2>Cart</h2>
+                <h2>Cart</h2>
                 <div>
                    <span>Cantidad de item en el Carrito</span>&nbsp;<span>{countTt}</span>
                 </div>
@@ -28,11 +28,12 @@ function Cart(){
             <>
                 <h2>Cart</h2>
                 <div>
-                   <span>Cantidad de item en el Carrito</span>&nbsp;<span>{countTt}</span>
+                   <span>Tenes {countTt} item en el Carrito</span>
                 </div>
                 {itemCart.map((item, key) => <CartView item={item} key={key} />)}
                 <button onClick={clear}>Vaciar Carrito</button>
                 <button><Link to="/Products">Seguir Comprando</Link></button>
+                <button><Link to="/Checkout">Terminar Compra</Link></button>
             </>    
         </div>
     )

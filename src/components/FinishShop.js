@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 
 function FinishShop(props){
-    console.log(props, 'props')
    
     return (
         <div className='terminarCompra'>

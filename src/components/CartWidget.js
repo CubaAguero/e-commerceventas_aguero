@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-import ShoppingCart from '../assets/ShoppingCart.png'
-
 import { CartContext } from '../Context/CartContext';
 
 function CartWidget() {

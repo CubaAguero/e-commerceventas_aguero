@@ -13,7 +13,7 @@ export default function CartView(props) {
             <div className="cartDetail">    
                 <div className="cant"><span>Cantidad: {props.item.quantity}</span></div>
                 <h5>{props.item.title}</h5>
-                <img src={props.item.photoUrl} className="cartImg" />
+                <img src={props.item.photoUrl} className="cartImg" alt='Imagen del producto' />
                 <div>
                     <span> ${props.item.price}</span>
                 </div>

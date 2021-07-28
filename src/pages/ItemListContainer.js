@@ -21,12 +21,11 @@ function ItemListContainer(){
             if(querySnapshot.size === 0){
                 console.log('no results');
             }else {
-                // setProduct(querySnapshot.docs.map(doc => { id: doc.id, doc.data() }))
                 const data = querySnapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data(),
                 }));
-                console.log(categoryID)
+                
                 if (categoryID){
                     const filterCategory = data.filter(
                         (item) => item.category === categoryID

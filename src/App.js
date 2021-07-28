@@ -8,6 +8,7 @@ import Cart from './pages/Cart';
 import ItemListContainer from './pages/ItemListContainer';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Checkout from './pages/Checkout';
 
 
 //Componets
@@ -16,6 +17,7 @@ import ItemDetailContainer from './pages/ItemDetailContainer';
 //
 //Context
 import { CartProvider } from './Context/CartContext';
+
 //
 
 function App() {
@@ -52,6 +54,10 @@ function App() {
 
               <Route path='/About'>
                 <About />
+              </Route>
+
+              <Route path='/Checkout'>
+                <Checkout />
               </Route>
             </Switch>
          </Router>

@@ -15,29 +15,30 @@ function ItemDetail({item}) {
         addToCart(item, e)
     }
     
+    if(!item){
+        return (
+            <div className="itemDetail">
+                ...Loading
+            </div>
+          )  
+    }
+
     return(
         <div className="itemDetail">
-            {!item ? (
-                <span>
-                    ...Cargando
-                </span>
-            ) : (
-                <>
-                    <h4>{item.title}</h4>
-                    <img src={item.photoUrl} className='imgProd' alt="" />
-                    <div>
-                        <span> ${item.price}</span>
-                        <p>Descripcion: {item.description}</p>
-                    </div>
-                   {!qAddCart ? (
-                       <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                    ) : (
-                        <FinishShop props={quantityToAdd} />
-                    )
-                    } 
-                </>
+          
+            <h4>{item.title}</h4>
+            <img src={item.photoUrl} className='imgProd' alt="" />
+            <div>
+                <span> ${item.price}</span>
+                <p>Descripcion: {item.description}</p>
+            </div>
+            {!qAddCart ? (
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                ) : (
+                    <FinishShop props={quantityToAdd} />
+                )
+            }         
 
-            )}   
         </div>
     )
 }
