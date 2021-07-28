@@ -3,10 +3,11 @@ import React, { useState, useContext } from 'react'
 import OrderView  from '../components/OrderView'
 
 import { CartContext } from '../Context/CartContext'
-import { getFirestore, getFirebase } from '../Firebase';
 
-import firebase from '../Firebase';
+
+import firebase  from 'firebase/app'
 import 'firebase/firestore';
+import { getFirestore, getFirebase } from '../Firebase';
 
 const inputs = [
     {
@@ -51,7 +52,6 @@ export default function Checkout() {
     const handleClick = (event) => {
         event.preventDefault();
         const db = getFirestore();
-        const firebase = getFirebase();
         const order = db.collection("order")
         
         const newOrder = {
@@ -63,12 +63,12 @@ export default function Checkout() {
 
         order.add(newOrder).then(({id}) => {
             setOrderId(id)
-            console.log('id order', id)
         }).catch(error => {
             console.log('error', error);
         })
 
         alert(`Su order fue registrada con id: ${orderId}`);
+        console.log('order', newOrder)
 
     }
 
@@ -79,6 +79,7 @@ export default function Checkout() {
             <div className='checkoutContainer'>
 
                 <form className='form'>
+                    <span>Ingrese sus Datos</span>
                     {inputs.map(({ name, type, placeholder })=> 
                         <input 
                             name={name}
