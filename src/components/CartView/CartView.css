@@ -1,0 +1,38 @@
+.cartDetail {
+    width: 90%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #282c34;
+  }
+  .cartDetail h3{
+    font-size: calc(8px + 2vmin);
+  }
+
+  .price{
+    font-size: calc(8px + 2vmin);
+  }
+
+  .cartImg {
+    width: 90px;
+  }
+
+  .btn_remove {
+    border: none;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .cartDetail h3 {
+      font-size: calc(10px + 1vmin);
+    }
+
+    .price {
+      font-size: calc(10px + 1vmin);
+    }
+    
+
+    .cartImg{
+      width: 80px;
+    }
+  }

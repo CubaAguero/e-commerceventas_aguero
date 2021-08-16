@@ -1,0 +1,45 @@
+.itemcount {
+    width: 90%;
+    height: 3rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .itemcount .itemCount_count {
+    border-radius: 10px;
+    width: 35%;
+    border: 1px solid #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .btn_upDw {
+    height: 100%;
+    width: 50%;
+    border: none;
+    background-color: transparent;
+    color: #282c34;
+    font-size: calc(10px + 2vmin);
+  }
+
+  .count {
+    color: #282c34;
+    font-size: calc(8px + 2vmin);
+  }
+
+  .itemcount .btn_addCart{
+    margin: 3px;
+    padding: 3px;
+    height: 90%;
+    width: 80%;
+    color: white;
+    font-family: inherit;
+    border-radius: 10px;
+    border: none;
+    background-color: #282c34;
+    font-size: calc(8px + 1vmin);
+  }

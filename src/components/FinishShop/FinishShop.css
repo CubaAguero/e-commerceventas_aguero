@@ -1,0 +1,41 @@
+.terminarCompra {
+    width: 90%;
+    margin: 5px;
+    text-align: center;
+    border-top: 1px solid #282c34;
+  }
+  
+  .terminarCompra .terminarCompra_p {
+    line-height: 1.5rem;
+    font-size: calc(8px + 1vmin);
+    margin: 3px;
+  }
+
+  .terminarCompra .btn_goCart {
+    height: 35px;
+    margin: 3px;
+    width: 80%;
+    color: white;
+    font-family: inherit;
+    border-radius: 10px;
+    border: none;
+    background-color: #282c34;
+    font-size: calc(8px + 1vmin);
+  }
+
+  .terminarCompra .btn_goCart:hover {
+    border: 1px solid #0e48fe;
+    color: #0e48fe;
+  }
+
+  .btn_linkCart {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  @media only screen and (max-width: 650px){
+    .terminarCompra .btn_goCart{
+      height: 25px;
+    }
+  }

@@ -1,0 +1,151 @@
+.checkoutContainer { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  box-sizing: border-box;
+}
+
+  .checkout {
+    width: 90%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .checkout_title {
+    color: #282c34;
+    margin: 2rem 0;
+    border-bottom: 1px solid #282c34;
+  }
+
+  .form {
+    max-width: 30rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #282c34;
+    box-shadow: 0 0 6px 1px #e1e5ee;
+    border-radius: 10px;
+  }
+  
+  .form .form_title {
+    text-transform: capitalize;
+  }
+
+  .input {
+    width: 80%;
+    height: 2rem;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  .input:hover {
+    border: 1px solid black
+  }
+  
+  .input:focus {
+    background-color: #282c34;
+    color: white;
+    border: none;
+  }
+
+   .btn-submit {
+    width: 70%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: calc(8px + 1vmin);
+   }
+  
+   .btn-submit:hover {
+     border: 1px solid #0e48fe;
+     color: #0e48fe;
+   }
+  
+
+  .orderView {
+    max-width: 50rem;
+    height: 30rem;
+    color: #282c34;
+  }
+  
+  .listOrder {
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .f1 {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #282c34;
+    padding: 1rem;
+  }
+
+  .totalF {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #282c34;
+  }
+
+ 
+  
+@media only screen and (max-width: 1366px) {
+  .form {
+    max-width: 24rem;
+  }
+
+  .orderView {
+    max-width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .form {
+    max-width: 20rem;
+  }
+
+  .orderView {
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .checkout {
+    width: 99%;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .form {
+    width: 90%;
+    max-width: 99%;
+    justify-self: center;
+  }
+  .orderView{
+    width: 90%;
+    max-width: 99%;
+    justify-self: center;
+  }
+}

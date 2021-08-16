@@ -1,0 +1,27 @@
+.About_container {
+    width: 100%;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    width: 70%;
+    min-height: calc(100vh - 163px);
+    color: #282c34;
+    padding: 5px 20px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #e1e5ee;
+}
+
+.about .aboutTitle {
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.about .aboutParagraph {
+    line-height: 1.5;
+    text-align: justify;
+    padding: 5px;
+    margin-top: 5px;
+}

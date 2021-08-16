@@ -1,22 +1,25 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import './App.css';
 
 //Pages
-import Home from './pages/Home'
-import Cart from './pages/Cart';
-import ItemListContainer from './pages/ItemListContainer';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import Checkout from './pages/Checkout';
+import Home from './pages/Home/Home'
+import Cart from './pages/Cart/Cart';
+import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
+import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
+import Checkout from './pages/Checkout/Checkout';
 
 
 //Componets
-import NavBar from './components/NavBar.js';
-import ItemDetailContainer from './pages/ItemDetailContainer';
+import NavBar from './components/NavBar/NavBar.js';
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer';
+import Footer from './components/Footer/Footer';
 //
 //Context
 import { CartProvider } from './Context/CartContext';
+
 
 //
 
@@ -60,6 +63,7 @@ function App() {
                 <Checkout />
               </Route>
             </Switch>
+            <Footer />
          </Router>
       </CartProvider>
 

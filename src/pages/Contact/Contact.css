@@ -1,0 +1,14 @@
+.contact_container {
+    width: 100%;
+    color: #282c34;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    width: 80%;
+    min-height: calc(100vh - 150px);
+    box-shadow: 0 0 5px 0 #e1e5ee;
+}
+
